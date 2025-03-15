@@ -82,7 +82,7 @@ La solución completa tiene dos partes:
         "/min",
         "cmd",
         "/k",
-        "title Firecrawl-MCP Server && echo Iniciando servidor... && npx -y firecrawl-mcp"
+        "&& npx -y firecrawl-mcp"
       ],
       "env": {
         "FIRECRAWL_API_KEY": "tu_api_key"
@@ -105,7 +105,7 @@ La solución completa tiene dos partes:
         "/min",
         "cmd",
         "/k",
-        "title GitHub-MCP Server && echo Iniciando servidor GitHub MCP... && npx -y @modelcontextprotocol/server-github"
+        "&& npx -y @modelcontextprotocol/server-github"
       ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "tu_token_de_github"
@@ -114,28 +114,3 @@ La solución completa tiene dos partes:
   }
 }
 ```
-
-### Explicación de la solución
-
-- `cmd.exe /c`: Ejecuta el comando y termina
-- `start /min`: Inicia un nuevo proceso en una ventana minimizada
-- `cmd /k`: Ejecuta el comando en la nueva ventana y mantiene la ventana abierta
-- `title ...`: Define un título descriptivo para la ventana
-- `echo Iniciando servidor...`: Muestra un mensaje informativo
-- `npx -y ...`: Ejecuta el servidor MCP
-- `"env": { ... }`: Proporciona las credenciales como variables de entorno al proceso del servidor
-
-Esta configuración permite que el servidor se ejecute en un proceso separado que no depende del proceso original de Cursor, y proporciona correctamente las credenciales al servidor MCP.
-
-## Recomendaciones adicionales
-
-**Depuración**: Para facilitar la identificación de errores, se puede quitar temporalmente el flag `/min` o redirigir la salida a un archivo de log:
-   ```
-   ... && npx -y firecrawl-mcp > firecrawl.log 2>&1
-   ```
-
-## Referencias
-
-- [Post del foro de Cursor sobre problemas con npx en MCP](https://forum.cursor.com/t/npx-command-is-not-working-on-mcp-windows-and-macos/53486/6)
-- [Documentación de Model Context Protocol](https://cursor.sh/docs/mcp)
-- [Repositorio de servidores MCP](https://github.com/modelcontextprotocol/servers)

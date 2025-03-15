@@ -82,7 +82,7 @@ The complete solution has two parts:
         "/min",
         "cmd",
         "/k",
-        "title Firecrawl-MCP Server && echo Starting server... && npx -y firecrawl-mcp"
+        "&& npx -y firecrawl-mcp"
       ],
       "env": {
         "FIRECRAWL_API_KEY": "your_api_key"
@@ -105,7 +105,7 @@ The complete solution has two parts:
         "/min",
         "cmd",
         "/k",
-        "title GitHub-MCP Server && echo Starting GitHub MCP server... && npx -y @modelcontextprotocol/server-github"
+        "&& npx -y @modelcontextprotocol/server-github"
       ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token"
