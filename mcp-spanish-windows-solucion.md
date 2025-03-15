@@ -4,6 +4,14 @@
 
 El Model Context Protocol (MCP) es una forma de ofrecer nuevas herramientas al Cursor Agent. Los servidores MCP como Firecrawl-MCP (para scraping web) o GitHub-MCP (para interactuar con GitHub) presentan problemas específicos de ejecución en sistemas Windows.
 
+## Pasos previos
+
+Antes de configurar los servidores MCP, asegúrate de completar los siguientes pasos:
+
+1. Activar el early access en Cursor Settings -> Beta -> Update Frequency. Esto nos da acceso a la última actualización que introduce lo siguiente: MCP: Added global server configuration with ~/.cursor/mcp.json and support for environment variables.
+
+2. Actualizar a la versión 0.47.5
+
 ## Problema
 
 Los servidores MCP no se mantienen activos en Windows, mostrando errores como "Client closed" poco después de iniciarse o "Authentication Failed: Bad credentials" al intentar usar las herramientas.

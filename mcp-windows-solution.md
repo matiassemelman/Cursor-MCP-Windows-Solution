@@ -4,6 +4,14 @@
 
 The Model Context Protocol (MCP) provides new tools for the Cursor Agent. MCP servers like Firecrawl-MCP (for web scraping) or GitHub-MCP (for GitHub interaction) present specific execution issues on Windows systems.
 
+## Preliminary Steps
+
+Before configuring MCP servers, make sure to complete the following steps:
+
+1. Activate early access in Cursor Settings -> Beta -> Update Frequency. This gives us access to the latest update that introduces: MCP: Added global server configuration with ~/.cursor/mcp.json and support for environment variables.
+
+2. Update to version 0.47.5
+
 ## Problem
 
 MCP servers don't remain active on Windows, showing errors such as "Client closed" shortly after startup or "Authentication Failed: Bad credentials" when trying to use the tools.
